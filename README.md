@@ -39,3 +39,20 @@ Requires haxe compiler and flashplayerdebugger in your path.
 > ./test.sh
 # aka:  haxe -main Test -debug -swf test.swf && flashplayerdebugger test.swf
 ```
+
+### Passing Objects to AS3
+
+By the way, to return complex objects from Haxe to AS3, you may have to convert them into a type that AS3 can handle.  For example, if you have a `Map<String, Rectangle>`, you can provide a getter that will return a Flash `Object` (in Haxe, a `Dynamic`):
+
+```
+var _map:Map<String, Rectangle>;
+public function get_placement():Dynamic {
+  var rtn:Dynamic = {};
+  var it:Iterator<String> = _map.keys();
+  for (name in it) {
+    untyped { rtn[name] =   _map[name]; }
+  }
+  return rtn;
+}
+```
+
