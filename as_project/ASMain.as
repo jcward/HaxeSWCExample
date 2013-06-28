@@ -20,8 +20,9 @@ package
       trace("Haxe swc test!");
 
       // new MovieClip is passed to haxe code to populate
-      // the flash.Lib.current reference.  Add so that
-      // it has a valid stage reference.
+      // the flash.Lib.current reference.  Note, if your
+      // Haxe code uses flash.Lib.current.stage, you may
+      // need to add this movieclip to the stage.
       var mc:MovieClip = new MovieClip();
 
       // Force import of Haxe main class (initSwc requires the
