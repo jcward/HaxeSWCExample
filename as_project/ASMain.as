@@ -25,10 +25,6 @@ package
       // need to add this movieclip to the stage.
       var mc:MovieClip = new MovieClip();
 
-      // Force import of Haxe main class (initSwc requires the
-      // main class to be compiled in)
-      mc.foo = hxlib.DummyMain;
-
       haxe.initSwc(mc); // For Haxe 3
       //haxe.init(mc); // For Haxe 2
 

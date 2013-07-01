@@ -2,8 +2,6 @@
 
 This project is a simple example of how to build a SWC from Haxe 3 source code and use it in an AS3 project.  This is an interesting workflow mostly because the Haxe compiler and syntax results in optimizations that make code (especially algorithms) run much faster in the Flash VM.
 
-The trickiest part about this Haxe->SWC workflow is that there apparently needs to be a dummy Main class, and that dummy Main class needs to be linked into AS3.
-
 ### Usage:
 
 Step 1: Compile the Haxe library to a SWC:
@@ -12,7 +10,7 @@ Requires haxe compiler in your path.
 
 ```
 > ./compile.sh
-# aka:  haxe -main hxlib.DummyMain --macro "include('hxlib')" -swf hxlib.swc
+# aka:  haxe --macro "include('hxlib')" -swf hxlib.swc
 ```
 
 Step 2: Run the AS3 project
