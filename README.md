@@ -27,6 +27,8 @@ HX performance: 53 ms, sum=4800540
 
 Nice!  Virtually the same simple sum-of-first-N-primes algorithm runs 4x faster when compiled via Haxe.
 
+Update: The 4X improvement is when run in the Flash runtime on desktop/web.  Oddly, when I tested the same code on mobile via AIR (both iOs cross-compiled and Android captive runtime), performance benefits were much less pronounced - 1.5X for a complex algorithm, inconsequential for the sum of primes algorithm...  Hmm, I wonder why...
+
 ### Verification
 
 It's a good idea to setup library verification testcases, since Haxe compiled to SWC is difficult (at best) to compile once linked into your AS3 application.  I've included a small testcase:
