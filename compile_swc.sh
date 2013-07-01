@@ -1,1 +1,1 @@
-haxe --macro "include('hxlib')" -swf hxlib.swc
+haxe -cp src --macro "include('hxlib')" -swf bin/hxlib.swc

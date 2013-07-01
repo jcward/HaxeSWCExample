@@ -36,6 +36,7 @@ It's a good idea to setup library verification testcases, since Haxe compiled to
 Requires haxe compiler and flashplayerdebugger in your path.
 
 ```
+> cd test
 > ./test.sh
 # aka:  haxe -main Test -debug -swf test.swf && flashplayerdebugger test.swf
 ```
